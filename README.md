@@ -25,9 +25,9 @@ jerometagubam@gmail.com
 
 ## Credits
 
-codejava.net
-https://www.youtube.com/c/Telusko
-freecodecamp for the MySQL Tutorial
+- codejava.net
+- https://www.youtube.com/c/Telusko
+- freecodecamp for the MySQL Tutorial
 
 ## License
 Distributed under MIT License.
