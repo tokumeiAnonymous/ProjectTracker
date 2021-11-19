@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Bug Tracker</title>
+</head>
+<body>
+<div align="center">	
+	<div sec:authorize="isAuthenticated()">
+		Welcome <b><span sec:authentication="name">Username</span></b>
+		&nbsp;
+		<i><span sec:authentication="principal.authorities">Roles</span></i>
+	</div>
+		
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Logout" />
+	</form>
+	
+	<h1>Bug Tracker</h1>
+	<div sec:authorize="hasAnyAuthority('Admin', 'Tester')">
+		<a href="new">Create New Bug</a>
+	</div>
+	
+	<br/><br/>
+	<table border="1" cellpadding="10">
+		<thead>
+			<tr>
+				<th>Bug ID</th>
+				<th>Description</th>
+				<th>Priority</th>
+				<th>Status</th>
+				<th>Type</th>
+				
+				<th sec:authorize="hasAnyAuthority('Admin', 'Tester', 'Developer', 'User')">Actions</th>				
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="bug : ${listBugs}">
+				<td th:text="${bug.id}">Bug ID</td>
+				<td th:text="${bug.name}">Description</td>
+				<td th:text="${bug.priority}">Priority</td>
+				<td th:text="${bug.status}">Status</td>
+				<td th:text="${bug.type}">Type</td>				
+				<td sec:authorize="hasAnyAuthority('Admin', 'Tester', 'Developer')">
+					<a th:href="@{'/edit/' + ${bug.id}}">Edit</a>			
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<a sec:authorize="hasAuthority('Admin')" th:href="@{'/delete/' + ${bug.id}}">Delete</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
