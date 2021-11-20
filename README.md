@@ -18,7 +18,7 @@ Technology used:
 
 ## Disclaimer
 I made this project in an attempt to learn how to use git and github.
-This is my web project.
+This is a web project.
 
 ## Contact
 jerometagubam@gmail.com
