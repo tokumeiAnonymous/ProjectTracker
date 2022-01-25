@@ -1,5 +1,7 @@
 # ProjectTracker
-Simple Web App with CRUD and Registration and Security
+Simple Web App with CRUD and Security
+
+![](https://github.com/tokumeiAnonymous/ProjectTracker/blob/main/Features.gif)
 
 ## Description
 This Project is used to track changes in the project that your building.
