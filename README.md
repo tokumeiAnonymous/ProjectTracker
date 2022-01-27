@@ -18,12 +18,8 @@ Technology used:
   - MySQL
   - Hibernate
 
-## Disclaimer
-I made this project in an attempt to learn how to use git and github.
-This is a web project.
-
 ## Contact
-jerometagubam@gmail.com
+jerometokumei@gmail.com
 
 ## Credits
 
