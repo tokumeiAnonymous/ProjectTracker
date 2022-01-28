@@ -3,6 +3,15 @@ Simple Web App with CRUD and Security
 
 ![](https://github.com/tokumeiAnonymous/ProjectTracker/blob/main/Features.gif)
 
+
+## Future things to do:
+
+- Replace bootstrap with pure css/html
+- Add register function with user role
+- Add function to edit users role (admin)
+- Add function to assign issue (admin/tester)
+- Store project history
+
 ## Description
 This Project is used to track changes in the project that your building.
 
